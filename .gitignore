@@ -1,0 +1,9 @@
+dist/
+node_modules/
+.openai/
+.netlify/
+*.zip
+.env
+.env.*
+!.env.example
+upload-state.json

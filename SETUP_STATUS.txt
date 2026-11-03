@@ -1,0 +1,55 @@
+ATELIER R3 - COMPLETE GITHUB UPLOAD PACKAGE
+Prepared November 3, 2026
+
+Repository: https://github.com/cmmeyer610-sudo/atelier-residences
+Branch: main
+
+This package includes the viewer source AND all 551 runtime asset files.
+The earlier compact source kit did not include these binary assets.
+All eight source GLBs reassemble to their original SHA-256 hashes.
+The viewer retains 339 saved cameras and 16 R3 detail views.
+
+NEXT STEPS - GITHUB DESKTOP
+1. Download ALL FOUR files named Atelier_R3_GitHub_01_of_04.zip through
+   Atelier_R3_GitHub_04_of_04.zip into one local folder. Extract each ZIP
+   into the SAME destination folder and let their folders merge.
+2. In GitHub Desktop, clone cmmeyer610-sudo/atelier-residences.
+3. Copy the CONTENTS of the extracted atelier-residences folder into the
+   cloned repository folder. Allow the README to be replaced.
+4. Confirm package.json, netlify.toml, public/, runtime-assets/ and scripts/
+   are at the repository root, not inside an extra nested folder.
+5. Commit with message: Publish complete Atelier R3 viewer and runtime assets.
+6. Push origin on main.
+
+All four are standard ZIPs, each below 100 MB. Together they contain the
+complete project. No special multipart archive program is required.
+
+Optional Windows PowerShell command, run in the folder with the four ZIPs:
+  Get-ChildItem .\Atelier_R3_GitHub_*_of_04.zip | ForEach-Object { Expand-Archive -LiteralPath $_.FullName -DestinationPath .\Atelier_R3_GitHub -Force }
+
+Upload the extracted files to GitHub, not the ZIP files themselves.
+The project contains over 700 files; GitHub Desktop avoids browser upload
+batches. Individual model parts are no larger than 8 MiB. Git LFS is not
+required for this prepared package.
+
+NETLIFY AFTER THE GITHUB PUSH
+Connect the intended viewer project to the repository and use:
+  Production branch: main
+  Base directory: leave blank (repository root)
+  Build command: npm run build
+  Publish directory: dist
+  Node version: 22 (already set in netlify.toml)
+
+Netlify supplies COMMIT_REF during its Git build. The build checks every
+asset and pins model/image/HDR URLs to that exact GitHub commit.
+Do not set ASSET_REF to the initial README-only commit.
+Do not publish the repository root or public/ directly.
+The Netlify interface is approximately 3.7 MB; 530.8 MB of runtime assets
+remain in GitHub and are loaded as needed.
+
+STATUS
+Local viewer tests and all runtime SHA-256 checks passed.
+The complete source is prepared. The GitHub asset upload and the new Netlify
+deployment are pending. No new live deployment is claimed by this package.
+After publication, open deployment-check.html on the viewer site to check
+the external asset URLs. Live GPU rendering still needs a browser check.

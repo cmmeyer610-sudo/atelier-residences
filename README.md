@@ -15,7 +15,7 @@ Architectural viewing studio with eight updated R3 residences, 339 saved cameras
   SHA-256-check the complete source GLB. Files load as needed; the browser cache
   and three-part download concurrency remain enabled.
 
-This public repository contains the browser-ready runtime assets. Its model files are downloadable.
+The intended setup uses a public runtime-asset repository. Its model files are downloadable.
 The repository does not contain native SKP, IGZ, IFC, plan PDFs or owner archives.
 Third-party component notices remain under `public/docs/updated-models/`.
 No new license is granted for third-party models by publishing this repository.
@@ -74,4 +74,3 @@ References:
 - https://docs.github.com/en/rest/repos/contents
 - https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits
 - https://docs.netlify.com/build/configure-builds/overview/
-

@@ -1,0 +1,12 @@
+{
+  "name": "atelier-residences",
+  "version": "3.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/verify-assets.mjs",
+    "test": "node --test tests/offload.test.mjs"
+  },
+  "engines": {"node": ">=20"}
+}
